@@ -40,9 +40,9 @@ def transform_scraped_book(book: dict) -> dict:
     if raw_rating not in RATING_MAP:
         raise ValueError(f"Invalid book rating: {raw_rating}")
     
-    availability = clean_text(book["category"]).casefold()
+    availability = clean_text(book["availability"]).casefold()
 
-    if availability not in {"in stock", "out od stock"}:
+    if availability not in {"in stock", "out of stock"}:
         raise ValueError(f"Unknown availability: {availability}")
     
     category = clean_text(book["category"]).casefold()

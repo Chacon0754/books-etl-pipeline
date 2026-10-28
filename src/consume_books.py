@@ -98,7 +98,7 @@ def consume_books(timeout:int = 120) -> Path:
                 consumer=consumer,
                 topic=topic,
                 specification=batch["topics"][topic],
-                batch_id=batch,
+                batch_id=batch_id,
                 transform=transform,
                 timeout=timeout
             )
@@ -137,7 +137,7 @@ def consume_books(timeout:int = 120) -> Path:
     with manifest_path.open("w", encoding="utf-8") as manifest_file:
         json.dump(manifest, manifest_file, ensure_ascii=False, indent=2)
     
-    logger.info(f"Processed batch metadata saved to: {manifest_file}")
+    logger.info(f"Processed batch metadata saved to: {manifest_path}")
 
     return manifest_path
 

@@ -1,0 +1,17 @@
+{
+  "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
+  "topics": {
+    "books_api": {
+      "partition": 0,
+      "count": 1000,
+      "start_offset": 0,
+      "end_offset": 1000
+    },
+    "books_scraping": {
+      "partition": 0,
+      "count": 1000,
+      "start_offset": 0,
+      "end_offset": 1000
+    }
+  }
+}

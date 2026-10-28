@@ -1,7 +1,10 @@
 beautifulsoup4==4.15.0
 certifi==2026.10.23
 charset-normalizer==3.5.2
+confluent-kafka==2.16.0
+dnspython==2.9.0
 idna==3.20
+pymongo==4.19.0
 requests==2.34.2
 soupsieve==3.0.4
 typing_extensions==4.16.0

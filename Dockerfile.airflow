@@ -1,0 +1,14 @@
+FROM apache/airflow:3.3.2-python3.12
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/opt/pipeline
+
+COPY --chown=airflow:root requirements.txt /opt/pipeline/requirements.txt
+
+RUN pip install --no-cache-dir \
+    "apache-airflow==${AIRFLOW_VERSION}" \
+    -r /opt/pipeline/requirements.txt \
+    && pip check
+
+COPY --chown=airflow:root src/ /opt/pipeline/src/

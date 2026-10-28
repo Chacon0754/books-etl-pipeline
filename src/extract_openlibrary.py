@@ -29,7 +29,7 @@ def extract_openlibrary(query: str = "subject:fiction", limit: int = 1000) -> Pa
     page = 1
     page_size = min(100, limit)
 
-    with requests.session() as session:
+    with requests.Session() as session:
         session.headers.update({"User-Agent": "BooksETLPipeline/1.0"})
 
         while len(books) < limit:

@@ -14,7 +14,7 @@ from airflow.providers.standard.operators.empty import EmptyOperator
     default_args={
         "retries": 1,
         "retry_delay": timedelta(seconds=30),
-        "execution_timeout": timedelta(seconds=15),
+        "execution_timeout": timedelta(minutes=15),
     },
     tags=["books", "etl"],
 )

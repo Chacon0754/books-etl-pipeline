@@ -1,6 +1,6 @@
 {
-  "_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
-  "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
+  "_id": "manual__2026-10-29T04:35:15.669030+00:00",
+  "batch_id": "manual__2026-10-29T04:35:15.669030+00:00",
   "api_count": 1000,
   "scraped_count": 1000,
   "currency": "GBP",
@@ -294,7 +294,7 @@
       "rating": 3,
       "available": true,
       "category": "romance",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/last-one-home-new-beginnings-1_383/index.html",
@@ -305,7 +305,7 @@
       "rating": 3,
       "available": true,
       "category": "fiction",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/civilization-and-its-discontents_140/index.html",
@@ -316,7 +316,7 @@
       "rating": 2,
       "available": true,
       "category": "psychology",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/the-barefoot-contessa-cookbook_440/index.html",
@@ -327,7 +327,7 @@
       "rating": 5,
       "available": true,
       "category": "food and drink",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/the-diary-of-a-young-girl_634/index.html",
@@ -338,7 +338,7 @@
       "rating": 3,
       "available": true,
       "category": "nonfiction",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/the-bone-hunters-lexy-vaughan-steven-macaulay-2_343/index.html",
@@ -349,7 +349,7 @@
       "rating": 3,
       "available": true,
       "category": "thriller",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/thomas-jefferson-and-the-tripoli-pirates-the-forgotten-war-that-changed-american-history_867/index.html",
@@ -360,7 +360,7 @@
       "rating": 1,
       "available": true,
       "category": "history",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html",
@@ -371,7 +371,7 @@
       "rating": 3,
       "available": true,
       "category": "mystery",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/the-improbability-of-love_607/index.html",
@@ -382,7 +382,7 @@
       "rating": 1,
       "available": true,
       "category": "fiction",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/the-man-who-mistook-his-wife-for-a-hat-and-other-clinical-tales_451/index.html",
@@ -393,7 +393,7 @@
       "rating": 4,
       "available": true,
       "category": "nonfiction",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     }
   ],
   "top_rated": [
@@ -406,7 +406,7 @@
       "rating": 5,
       "available": true,
       "category": "history",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/higherselfie-wake-up-your-life-free-your-soul-find-your-tribe_957/index.html",
@@ -417,7 +417,7 @@
       "rating": 5,
       "available": true,
       "category": "nonfiction",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/unqualified-how-god-uses-broken-people-to-do-big-things_873/index.html",
@@ -428,7 +428,7 @@
       "rating": 5,
       "available": true,
       "category": "christian",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html",
@@ -439,7 +439,7 @@
       "rating": 5,
       "available": true,
       "category": "travel",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/10-day-green-smoothie-cleanse-lose-up-to-15-pounds-in-10-days_581/index.html",
@@ -450,7 +450,7 @@
       "rating": 5,
       "available": true,
       "category": "health",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/a-flight-of-arrows-the-pathfinders-2_876/index.html",
@@ -461,7 +461,7 @@
       "rating": 5,
       "available": true,
       "category": "historical fiction",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/a-gentlemans-position-society-of-gentlemen-3_584/index.html",
@@ -472,7 +472,7 @@
       "rating": 5,
       "available": true,
       "category": "romance",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/a-heartbreaking-work-of-staggering-genius_115/index.html",
@@ -483,7 +483,7 @@
       "rating": 5,
       "available": true,
       "category": "autobiography",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/a-new-earth-awakening-to-your-lifes-purpose_311/index.html",
@@ -494,7 +494,7 @@
       "rating": 5,
       "available": true,
       "category": "spirituality",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     },
     {
       "source_id": "https://books.toscrape.com/catalogue/a-piece-of-sky-a-grain-of-rice-a-memoir-in-four-meditations_878/index.html",
@@ -505,7 +505,7 @@
       "rating": 5,
       "available": true,
       "category": "default",
-      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+      "batch_id": "manual__2026-10-29T04:35:15.669030+00:00"
     }
   ]
 }

@@ -1,17 +1,17 @@
 {
-  "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
+  "batch_id": "manual__2026-10-29T04:35:15.669030+00:00",
   "topics": {
     "books_api": {
       "partition": 0,
       "count": 1000,
-      "start_offset": 1000,
-      "end_offset": 2000
+      "start_offset": 2000,
+      "end_offset": 3000
     },
     "books_scraping": {
       "partition": 0,
       "count": 1000,
-      "start_offset": 1000,
-      "end_offset": 2000
+      "start_offset": 2000,
+      "end_offset": 3000
     }
   }
 }

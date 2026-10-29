@@ -7,6 +7,7 @@ import time
 from pathlib import Path
 from confluent_kafka import Consumer, KafkaError, KafkaException, TopicPartition
 from src.transform_books import transform_api_book, transform_scraped_book
+from collections.abc import Callable
 
 from src.config import RAW_DIRECTORY, PROCESSED_DIRECTORY
 
@@ -19,7 +20,7 @@ OUTPUTS = {
     "books_scraping": ("books_scraped.json", transform_scraped_book),
 }
 
-def consume_topic(consumer: Consumer, topic: str, specification: dict, batch_id: str, transform, timeout: int) -> list:
+def consume_topic(consumer: Consumer, topic: str, specification: dict, batch_id: str, transform: Callable[[dict], dict], timeout: int) -> list:
     consumer.assign(
         [
             TopicPartition(topic, specification["partition"], specification["start_offset"])
@@ -69,17 +70,8 @@ def consume_topic(consumer: Consumer, topic: str, specification: dict, batch_id:
 
     return books
 
-def consume_books(timeout:int = 120) -> Path:
-    if timeout < 1:
-        raise ValueError("The timeout must be greater than zero.")
-    
-    batch = read_json(BATCH_PATH)
-    
-    batch_id = batch["batch_id"]
-
-    results = {}
-
-    consumer = Consumer(
+def create_consumer(batch_id: str) -> Consumer:
+    return Consumer(
         {
             "bootstrap.servers": os.environ["KAFKA_BOOTSTRAP_SERVERS"],
             "group.id": f"books-transform-{batch_id}",
@@ -89,6 +81,50 @@ def consume_books(timeout:int = 120) -> Path:
             "enable.partition.eof": True,
         }
     )
+
+def save_processed_books(batch_id: str, results: dict[str, list[dict]]) -> Path:
+    manifest = {
+        "batch_id": batch_id,
+        "collections": {},
+    }
+
+    for topic, (filename, _) in OUTPUTS.items():
+        output_path = PROCESSED_DIRECTORY / filename
+        books = results[topic]
+
+        write_json(
+            output_path,
+            {
+                "batch_id": batch_id,
+                "processed_count": len(books),
+                "docs": books,
+            },
+        )
+
+        manifest["collections"][output_path.stem] = {
+            "file": filename,
+            "count": len(books),
+        }
+
+        logger.info(f"Processed data saved to {output_path}")
+
+    manifest_path = PROCESSED_DIRECTORY / "processed_batch.json"
+    write_json(manifest_path, manifest)
+
+    logger.info(f"Processed batch metadata saved to {manifest_path}")
+
+    return manifest_path
+    
+
+def consume_books(timeout: int = 120) -> Path:
+    if timeout < 1:
+        raise ValueError("The timeout must be greater than zero.")
+
+    batch = read_json(BATCH_PATH)
+    batch_id = batch["batch_id"]
+
+    consumer = create_consumer(batch_id)
+    results: dict[str, list[dict]] = {}
 
     logger.info(f"Processing batch: {batch_id}")
 
@@ -100,43 +136,12 @@ def consume_books(timeout:int = 120) -> Path:
                 specification=batch["topics"][topic],
                 batch_id=batch_id,
                 transform=transform,
-                timeout=timeout
+                timeout=timeout,
             )
     finally:
         consumer.close()
-    
 
-    manifest = {
-        "batch_id": batch_id,
-        "collections": {}
-    }
-
-    for topic, (filename, _) in OUTPUTS.items():
-        output_path = PROCESSED_DIRECTORY / filename
-        books = results[topic]
-
-        output = {
-            "batch_id": batch_id,
-            "processed_count": len(books),
-            "docs": books,
-        }
-
-        write_json(output_path, output)
-        
-        manifest["collections"][output_path.stem] = {
-            "file": filename,
-            "count": len(books),
-        }
-
-        logger.info(f"Processed data saved to: {output_path}")
-    
-    manifest_path = PROCESSED_DIRECTORY / "processed_batch.json"
-
-    write_json(manifest_path, manifest)
-    
-    logger.info(f"Processed batch metadata saved to: {manifest_path}")
-
-    return manifest_path
+    return save_processed_books(batch_id, results)
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Consume and transform a published book batch")

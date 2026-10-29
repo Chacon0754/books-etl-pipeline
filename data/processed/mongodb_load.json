@@ -1,0 +1,18 @@
+{
+  "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
+  "database": "books_pipeline",
+  "collections": {
+    "books_api": {
+      "count": 1000,
+      "upserted_count": 0,
+      "matched_count": 1000,
+      "modified_count": 0
+    },
+    "books_scraped": {
+      "count": 1000,
+      "upserted_count": 0,
+      "matched_count": 1000,
+      "modified_count": 0
+    }
+  }
+}

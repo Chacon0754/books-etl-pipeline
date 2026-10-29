@@ -97,6 +97,34 @@ services:
       retries: 18
       start_period: 60s
 
+  streamlit:
+    image: books-dashboard:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      MONGO_URI: mongodb://${MONGO_ROOT_USERNAME}:${MONGO_ROOT_PASSWORD}@mongodb:27017/?authSource=admin
+      MONGO_DATABASE: ${MONGO_DATABASE:?Set MONGO_DATABASE}
+    volumes:
+      - ./app:/opt/pipeline/app:ro
+      - ./src:/opt/pipeline/src:ro
+      - ./data:/opt/pipeline/data:ro
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=5)"
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 20s
+
 volumes:
   mongodb_data:
   airflow_data:

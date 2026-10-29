@@ -1,0 +1,25 @@
+FROM python:3.12-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/opt/pipeline
+
+WORKDIR /opt/pipeline
+
+COPY requirements.dashboard.txt /tmp/requirements.dashboard.txt
+
+RUN pip install --no-cache-dir -r /tmp/requirements.dashboard.txt \
+    && pip check
+
+RUN useradd --create-home --user-group dashboard
+
+COPY --chown=dashboard:dashboard src/ ./src/
+COPY --chown=dashboard:dashboard app/ ./app/
+
+USER dashboard
+
+EXPOSE 8501
+
+CMD ["python", "-m", "streamlit", "run", "app/dashboard.py", \
+    "--server.address=0.0.0.0", "--server.port=8501", \
+    "--server.headless=true", "--browser.gatherUsageStats=false"]

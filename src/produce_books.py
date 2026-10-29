@@ -68,7 +68,7 @@ def publish_topic(producer: Producer, topic: str, books: list, key_field: str, b
         "end_offset": max(offsets) + 1,
     }
 
-def read_sources() -> list[dict[str, Any]]:
+def read_sources() -> dict[str, list[dict[str, Any]]]:
     datasets = {}
 
     for topic, (filename, key_field) in SOURCES.items():

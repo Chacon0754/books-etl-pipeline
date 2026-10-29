@@ -1,0 +1,511 @@
+{
+  "_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
+  "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8",
+  "api_count": 1000,
+  "scraped_count": 1000,
+  "currency": "GBP",
+  "average_price": 35.07,
+  "minimum_price": 10.0,
+  "maximum_price": 59.99,
+  "average_rating": 2.92,
+  "price_histogram": [
+    {
+      "start": 10,
+      "end": 15,
+      "count": 106
+    },
+    {
+      "start": 15,
+      "end": 20,
+      "count": 90
+    },
+    {
+      "start": 20,
+      "end": 25,
+      "count": 103
+    },
+    {
+      "start": 25,
+      "end": 30,
+      "count": 103
+    },
+    {
+      "start": 30,
+      "end": 35,
+      "count": 82
+    },
+    {
+      "start": 35,
+      "end": 40,
+      "count": 113
+    },
+    {
+      "start": 40,
+      "end": 45,
+      "count": 102
+    },
+    {
+      "start": 45,
+      "end": 50,
+      "count": 103
+    },
+    {
+      "start": 50,
+      "end": 55,
+      "count": 100
+    },
+    {
+      "start": 55,
+      "end": 60,
+      "count": 98
+    }
+  ],
+  "category_counts": [
+    {
+      "category": "default",
+      "count": 152
+    },
+    {
+      "category": "nonfiction",
+      "count": 110
+    },
+    {
+      "category": "sequential art",
+      "count": 75
+    },
+    {
+      "category": "add a comment",
+      "count": 67
+    },
+    {
+      "category": "fiction",
+      "count": 65
+    },
+    {
+      "category": "young adult",
+      "count": 54
+    },
+    {
+      "category": "fantasy",
+      "count": 48
+    },
+    {
+      "category": "romance",
+      "count": 35
+    },
+    {
+      "category": "mystery",
+      "count": 32
+    },
+    {
+      "category": "food and drink",
+      "count": 30
+    },
+    {
+      "category": "childrens",
+      "count": 29
+    },
+    {
+      "category": "historical fiction",
+      "count": 26
+    },
+    {
+      "category": "classics",
+      "count": 19
+    },
+    {
+      "category": "poetry",
+      "count": 19
+    },
+    {
+      "category": "history",
+      "count": 18
+    },
+    {
+      "category": "horror",
+      "count": 17
+    },
+    {
+      "category": "womens fiction",
+      "count": 17
+    },
+    {
+      "category": "science fiction",
+      "count": 16
+    },
+    {
+      "category": "science",
+      "count": 14
+    },
+    {
+      "category": "music",
+      "count": 13
+    },
+    {
+      "category": "business",
+      "count": 12
+    },
+    {
+      "category": "philosophy",
+      "count": 11
+    },
+    {
+      "category": "thriller",
+      "count": 11
+    },
+    {
+      "category": "travel",
+      "count": 11
+    },
+    {
+      "category": "humor",
+      "count": 10
+    },
+    {
+      "category": "autobiography",
+      "count": 9
+    },
+    {
+      "category": "art",
+      "count": 8
+    },
+    {
+      "category": "psychology",
+      "count": 7
+    },
+    {
+      "category": "religion",
+      "count": 7
+    },
+    {
+      "category": "christian fiction",
+      "count": 6
+    },
+    {
+      "category": "new adult",
+      "count": 6
+    },
+    {
+      "category": "spirituality",
+      "count": 6
+    },
+    {
+      "category": "biography",
+      "count": 5
+    },
+    {
+      "category": "self help",
+      "count": 5
+    },
+    {
+      "category": "sports and games",
+      "count": 5
+    },
+    {
+      "category": "health",
+      "count": 4
+    },
+    {
+      "category": "christian",
+      "count": 3
+    },
+    {
+      "category": "contemporary",
+      "count": 3
+    },
+    {
+      "category": "politics",
+      "count": 3
+    },
+    {
+      "category": "historical",
+      "count": 2
+    },
+    {
+      "category": "academic",
+      "count": 1
+    },
+    {
+      "category": "adult fiction",
+      "count": 1
+    },
+    {
+      "category": "crime",
+      "count": 1
+    },
+    {
+      "category": "cultural",
+      "count": 1
+    },
+    {
+      "category": "erotica",
+      "count": 1
+    },
+    {
+      "category": "novels",
+      "count": 1
+    },
+    {
+      "category": "paranormal",
+      "count": 1
+    },
+    {
+      "category": "parenting",
+      "count": 1
+    },
+    {
+      "category": "short stories",
+      "count": 1
+    },
+    {
+      "category": "suspense",
+      "count": 1
+    }
+  ],
+  "rating_counts": [
+    {
+      "rating": 1,
+      "count": 226
+    },
+    {
+      "rating": 2,
+      "count": 196
+    },
+    {
+      "rating": 3,
+      "count": 203
+    },
+    {
+      "rating": 4,
+      "count": 179
+    },
+    {
+      "rating": 5,
+      "count": 196
+    }
+  ],
+  "top_expensive": [
+    {
+      "source_id": "https://books.toscrape.com/catalogue/the-perfect-play-play-by-play-1_352/index.html",
+      "url": "https://books.toscrape.com/catalogue/the-perfect-play-play-by-play-1_352/index.html",
+      "title": "The Perfect Play (Play by Play #1)",
+      "price": 59.99,
+      "currency": "GBP",
+      "rating": 3,
+      "available": true,
+      "category": "romance",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/last-one-home-new-beginnings-1_383/index.html",
+      "url": "https://books.toscrape.com/catalogue/last-one-home-new-beginnings-1_383/index.html",
+      "title": "Last One Home (New Beginnings #1)",
+      "price": 59.98,
+      "currency": "GBP",
+      "rating": 3,
+      "available": true,
+      "category": "fiction",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/civilization-and-its-discontents_140/index.html",
+      "url": "https://books.toscrape.com/catalogue/civilization-and-its-discontents_140/index.html",
+      "title": "Civilization and Its Discontents",
+      "price": 59.95,
+      "currency": "GBP",
+      "rating": 2,
+      "available": true,
+      "category": "psychology",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/the-barefoot-contessa-cookbook_440/index.html",
+      "url": "https://books.toscrape.com/catalogue/the-barefoot-contessa-cookbook_440/index.html",
+      "title": "The Barefoot Contessa Cookbook",
+      "price": 59.92,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "food and drink",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/the-diary-of-a-young-girl_634/index.html",
+      "url": "https://books.toscrape.com/catalogue/the-diary-of-a-young-girl_634/index.html",
+      "title": "The Diary of a Young Girl",
+      "price": 59.9,
+      "currency": "GBP",
+      "rating": 3,
+      "available": true,
+      "category": "nonfiction",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/the-bone-hunters-lexy-vaughan-steven-macaulay-2_343/index.html",
+      "url": "https://books.toscrape.com/catalogue/the-bone-hunters-lexy-vaughan-steven-macaulay-2_343/index.html",
+      "title": "The Bone Hunters (Lexy Vaughan & Steven Macaulay #2)",
+      "price": 59.71,
+      "currency": "GBP",
+      "rating": 3,
+      "available": true,
+      "category": "thriller",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/thomas-jefferson-and-the-tripoli-pirates-the-forgotten-war-that-changed-american-history_867/index.html",
+      "url": "https://books.toscrape.com/catalogue/thomas-jefferson-and-the-tripoli-pirates-the-forgotten-war-that-changed-american-history_867/index.html",
+      "title": "Thomas Jefferson and the Tripoli Pirates: The Forgotten War That Changed American History",
+      "price": 59.64,
+      "currency": "GBP",
+      "rating": 1,
+      "available": true,
+      "category": "history",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html",
+      "url": "https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html",
+      "title": "Boar Island (Anna Pigeon #19)",
+      "price": 59.48,
+      "currency": "GBP",
+      "rating": 3,
+      "available": true,
+      "category": "mystery",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/the-improbability-of-love_607/index.html",
+      "url": "https://books.toscrape.com/catalogue/the-improbability-of-love_607/index.html",
+      "title": "The Improbability of Love",
+      "price": 59.45,
+      "currency": "GBP",
+      "rating": 1,
+      "available": true,
+      "category": "fiction",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/the-man-who-mistook-his-wife-for-a-hat-and-other-clinical-tales_451/index.html",
+      "url": "https://books.toscrape.com/catalogue/the-man-who-mistook-his-wife-for-a-hat-and-other-clinical-tales_451/index.html",
+      "title": "The Man Who Mistook His Wife for a Hat and Other Clinical Tales",
+      "price": 59.45,
+      "currency": "GBP",
+      "rating": 4,
+      "available": true,
+      "category": "nonfiction",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    }
+  ],
+  "top_rated": [
+    {
+      "source_id": "https://books.toscrape.com/catalogue/most-blessed-of-the-patriarchs-thomas-jefferson-and-the-empire-of-the-imagination_509/index.html",
+      "url": "https://books.toscrape.com/catalogue/most-blessed-of-the-patriarchs-thomas-jefferson-and-the-empire-of-the-imagination_509/index.html",
+      "title": "\"Most Blessed of the Patriarchs\": Thomas Jefferson and the Empire of the Imagination",
+      "price": 44.48,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "history",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/higherselfie-wake-up-your-life-free-your-soul-find-your-tribe_957/index.html",
+      "url": "https://books.toscrape.com/catalogue/higherselfie-wake-up-your-life-free-your-soul-find-your-tribe_957/index.html",
+      "title": "#HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.",
+      "price": 23.11,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "nonfiction",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/unqualified-how-god-uses-broken-people-to-do-big-things_873/index.html",
+      "url": "https://books.toscrape.com/catalogue/unqualified-how-god-uses-broken-people-to-do-big-things_873/index.html",
+      "title": "(Un)Qualified: How God Uses Broken People to Do Big Things",
+      "price": 54.0,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "christian",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html",
+      "url": "https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html",
+      "title": "1,000 Places to See Before You Die",
+      "price": 26.08,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "travel",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/10-day-green-smoothie-cleanse-lose-up-to-15-pounds-in-10-days_581/index.html",
+      "url": "https://books.toscrape.com/catalogue/10-day-green-smoothie-cleanse-lose-up-to-15-pounds-in-10-days_581/index.html",
+      "title": "10-Day Green Smoothie Cleanse: Lose Up to 15 Pounds in 10 Days!",
+      "price": 49.71,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "health",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/a-flight-of-arrows-the-pathfinders-2_876/index.html",
+      "url": "https://books.toscrape.com/catalogue/a-flight-of-arrows-the-pathfinders-2_876/index.html",
+      "title": "A Flight of Arrows (The Pathfinders #2)",
+      "price": 55.53,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "historical fiction",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/a-gentlemans-position-society-of-gentlemen-3_584/index.html",
+      "url": "https://books.toscrape.com/catalogue/a-gentlemans-position-society-of-gentlemen-3_584/index.html",
+      "title": "A Gentleman's Position (Society of Gentlemen #3)",
+      "price": 14.75,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "romance",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/a-heartbreaking-work-of-staggering-genius_115/index.html",
+      "url": "https://books.toscrape.com/catalogue/a-heartbreaking-work-of-staggering-genius_115/index.html",
+      "title": "A Heartbreaking Work of Staggering Genius",
+      "price": 54.29,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "autobiography",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/a-new-earth-awakening-to-your-lifes-purpose_311/index.html",
+      "url": "https://books.toscrape.com/catalogue/a-new-earth-awakening-to-your-lifes-purpose_311/index.html",
+      "title": "A New Earth: Awakening to Your Life's Purpose",
+      "price": 55.65,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "spirituality",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    },
+    {
+      "source_id": "https://books.toscrape.com/catalogue/a-piece-of-sky-a-grain-of-rice-a-memoir-in-four-meditations_878/index.html",
+      "url": "https://books.toscrape.com/catalogue/a-piece-of-sky-a-grain-of-rice-a-memoir-in-four-meditations_878/index.html",
+      "title": "A Piece of Sky, a Grain of Rice: A Memoir in Four Meditations",
+      "price": 56.76,
+      "currency": "GBP",
+      "rating": 5,
+      "available": true,
+      "category": "default",
+      "batch_id": "be165ab394fa4a31a9faeeeb50eb0cc8"
+    }
+  ]
+}

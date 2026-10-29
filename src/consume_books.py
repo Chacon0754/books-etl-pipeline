@@ -7,11 +7,11 @@ from pathlib import Path
 from confluent_kafka import Consumer, KafkaError, KafkaException, TopicPartition
 from src.transform_books import transform_api_book, transform_scraped_book
 
+from src.config import RAW_DIRECTORY, PROCESSED_DIRECTORY
+
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-BATCH_PATH = PROJECT_ROOT / "data" / "raw" / "kafka_batch.json"
-PROCESSED_DIRECTORY = PROJECT_ROOT / "data" / "processed"
+BATCH_PATH = RAW_DIRECTORY / "kafka_batch.json"
 
 OUTPUTS = {
     "books_api": ("books_api.json", transform_api_book),

@@ -1,3 +1,4 @@
+from src.config import RAW_DIRECTORY
 import argparse
 import json
 import logging
@@ -9,8 +10,8 @@ from bs4 import BeautifulSoup, Tag
 
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = PROJECT_ROOT / "data" / "raw" / "books_scraped.json"
+
+OUTPUT_PATH = RAW_DIRECTORY / "books_scraped.json"
 BASE_URL = "https://books.toscrape.com/"
 
 def fetch_page(session: requests.Session, url: str) -> BeautifulSoup:

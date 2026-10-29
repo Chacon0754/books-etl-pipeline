@@ -5,11 +5,11 @@ import os
 from pathlib import Path
 from uuid import uuid4
 from confluent_kafka import Producer
+from src.config import RAW_DIRECTORY
 
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RAW_DIRECTORY = PROJECT_ROOT / "data" / "raw"
+
 BATCH_PATH = RAW_DIRECTORY / "kafka_batch.json"
 
 SOURCES = {

@@ -4,11 +4,12 @@ import logging
 import time
 from pathlib import Path
 import requests
+from src.config import RAW_DIRECTORY
 
 logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = PROJECT_ROOT / "data" / "raw" / "openlibrary.json"
+OUTPUT_PATH = RAW_DIRECTORY / "openlibrary.json"
 API_URL = "https://openlibrary.org/search.json"
 
 FIELDS = (

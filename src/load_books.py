@@ -3,11 +3,10 @@ import logging
 import os
 from pathlib import Path
 from pymongo import MongoClient, ReplaceOne
+from src.config import PROCESSED_DIRECTORY
 
 logger  = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PROCESSED_DIRECTORY = PROJECT_ROOT / "data" / "processed"
 MANIFEST_PATH = PROCESSED_DIRECTORY / "processed_batch.json"
 LOAD_REPORT_PATH = PROCESSED_DIRECTORY / "mongodb_load.json"
 

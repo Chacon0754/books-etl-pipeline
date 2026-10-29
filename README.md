@@ -125,7 +125,6 @@ requirements.txt
 requirements.dashboard.txt
 requirements.dev.txt
 README.md
-REPRODUCCION.md
 ```
 
 Los archivos de `data/` se generan durante la ejecución.
@@ -147,7 +146,6 @@ Las variables de configuración se definen en un archivo `.env` ubicado en la ra
 
 El archivo `.env` está excluido de Git.
 
-Consulta [REPRODUCCION.md](REPRODUCCION.md) para configurar el entorno, construir las imágenes, crear los tópicos, ejecutar el DAG y comprobar los resultados.
 
 ## Validación realizada
 

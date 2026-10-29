@@ -1,4 +1,4 @@
-import json
+from src.file_utils import read_json, write_json
 import logging
 import os
 from pathlib import Path
@@ -13,8 +13,7 @@ LOAD_REPORT_PATH = PROCESSED_DIRECTORY / "mongodb_load.json"
 COLLECTIONS = ("books_api", "books_scraped")
 
 def load_books() -> Path:
-    with MANIFEST_PATH.open("r", encoding="utf-8") as manifest_file:
-        manifest = json.load(manifest_file)
+    manifest = read_json(MANIFEST_PATH)
     
     batch_id = manifest["batch_id"]
     datasets = {}
@@ -23,8 +22,7 @@ def load_books() -> Path:
         specification = manifest["collections"][collection_name]
         input_path = PROCESSED_DIRECTORY / specification["file"]
 
-        with input_path.open("r", encoding="utf-8") as input_file:
-            payload = json.load(input_file)
+        payload = read_json(input_path)
         
         if payload.get("batch_id") != batch_id:
             raise ValueError(f"Batch mismatch in {input_path}")
@@ -96,8 +94,7 @@ def load_books() -> Path:
                 f"batch_count={batch_count}."
             )
     
-    with LOAD_REPORT_PATH.open("w", encoding="utf-8") as report_file:
-        json.dump(report, report_file, ensure_ascii=False, indent=2)
+    write_json(LOAD_REPORT_PATH, report)
     
     logger.info(f"MongoDB load report saved to {LOAD_REPORT_PATH}")
 

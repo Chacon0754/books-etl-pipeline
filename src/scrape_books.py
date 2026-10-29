@@ -1,6 +1,6 @@
 from src.config import RAW_DIRECTORY
 import argparse
-import json
+from src.file_utils import write_json
 import logging
 import time
 from pathlib import Path
@@ -121,10 +121,7 @@ def scrape_books(limit: int = 1000) -> Path:
         "docs": books,
     }
 
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-
-    with OUTPUT_PATH.open("w", encoding="utf-8") as output_file:
-        json.dump(result, output_file, ensure_ascii=False, indent=2)
+    write_json(OUTPUT_PATH, result)
     
     logger.info(f"Extracted {len(books)} books from Books to Scrape")
     logger.info(f"Raw data saved to {OUTPUT_PATH}")

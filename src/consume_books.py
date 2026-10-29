@@ -1,5 +1,6 @@
 import argparse
 import json
+from src.file_utils import read_json, write_json
 import logging
 import os
 import time
@@ -72,8 +73,7 @@ def consume_books(timeout:int = 120) -> Path:
     if timeout < 1:
         raise ValueError("The timeout must be greater than zero.")
     
-    with BATCH_PATH.open("r", encoding="utf-8") as batch_file:
-        batch = json.load(batch_file)
+    batch = read_json(BATCH_PATH)
     
     batch_id = batch["batch_id"]
 
@@ -105,7 +105,6 @@ def consume_books(timeout:int = 120) -> Path:
     finally:
         consumer.close()
     
-    PROCESSED_DIRECTORY.mkdir(parents=True, exist_ok=True)
 
     manifest = {
         "batch_id": batch_id,
@@ -122,8 +121,7 @@ def consume_books(timeout:int = 120) -> Path:
             "docs": books,
         }
 
-        with output_path.open("w", encoding="utf-8") as output_file:
-            json.dump(output, output_file, ensure_ascii=False, indent=2)
+        write_json(output_path, output)
         
         manifest["collections"][output_path.stem] = {
             "file": filename,
@@ -134,8 +132,7 @@ def consume_books(timeout:int = 120) -> Path:
     
     manifest_path = PROCESSED_DIRECTORY / "processed_batch.json"
 
-    with manifest_path.open("w", encoding="utf-8") as manifest_file:
-        json.dump(manifest, manifest_file, ensure_ascii=False, indent=2)
+    write_json(manifest_path, manifest)
     
     logger.info(f"Processed batch metadata saved to: {manifest_path}")
 

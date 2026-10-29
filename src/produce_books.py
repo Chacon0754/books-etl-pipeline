@@ -1,4 +1,5 @@
 import argparse
+from src.file_utils import read_json, write_json
 import json
 import logging
 import os
@@ -73,8 +74,7 @@ def produce_books(batch_id: str | None = None) -> Path:
     for topic, (filename, key_field) in SOURCES.items():
         input_path = RAW_DIRECTORY / filename
 
-        with input_path.open("r", encoding="utf-8") as input_file:
-            payload = json.load(input_file)
+        payload = read_json(input_path)
         
         books = payload.get("docs")
 
@@ -116,8 +116,7 @@ def produce_books(batch_id: str | None = None) -> Path:
 
         logger.info(f"Published: {result['count']} messages to {topic}")
 
-    with BATCH_PATH.open("w", encoding="utf-8") as batch_file:
-        json.dump(batch, batch_file, ensure_ascii=False, indent=2)
+    write_json(BATCH_PATH, BATCH_PATH)
     
     logger.info(f"Batch metadata saved to {BATCH_PATH}")
 

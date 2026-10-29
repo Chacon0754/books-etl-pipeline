@@ -1,5 +1,5 @@
 import argparse
-import json
+from src.file_utils import write_json
 import logging
 import time
 from pathlib import Path
@@ -8,7 +8,6 @@ from src.config import RAW_DIRECTORY
 
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATH = RAW_DIRECTORY / "openlibrary.json"
 API_URL = "https://openlibrary.org/search.json"
 
@@ -88,10 +87,8 @@ def extract_openlibrary(query: str = "subject:fiction", limit: int = 1000) -> Pa
         "docs": books,
     }
     
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    with OUTPUT_PATH.open("w", encoding="utf-8") as output_file:
-        json.dump(result, output_file, ensure_ascii=False, indent=2)
+    write_json(OUTPUT_PATH, result)
     
     logger.info(f"Extracted {len(books)} books from Openlibrary")
     logger.info(f"Raw data saved to {OUTPUT_PATH}")

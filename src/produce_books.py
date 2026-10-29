@@ -7,6 +7,7 @@ from pathlib import Path
 from uuid import uuid4
 from confluent_kafka import Producer
 from src.config import RAW_DIRECTORY
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -67,26 +68,25 @@ def publish_topic(producer: Producer, topic: str, books: list, key_field: str, b
         "end_offset": max(offsets) + 1,
     }
 
-def produce_books(batch_id: str | None = None) -> Path:
-    batch_id = batch_id or uuid4().hex
+def read_sources() -> list[dict[str, Any]]:
     datasets = {}
 
     for topic, (filename, key_field) in SOURCES.items():
-        input_path = RAW_DIRECTORY / filename
-
-        payload = read_json(input_path)
-        
-        books = payload.get("docs")
+        path = RAW_DIRECTORY / filename
+        books = read_json(path).get("docs")
 
         if not isinstance(books, list) or not books:
-            raise ValueError(f"No book records found in {input_path}")
-        
+            raise ValueError(f"No book records found in {path}")
+
         if any(not isinstance(book, dict) or not book.get(key_field) for book in books):
-            raise ValueError(f"Missing book identifiers in {input_path}")
+            raise ValueError(f"Missing book identifiers in {path}")
         
         datasets[topic] = books
     
-    producer = Producer(
+    return datasets
+
+def create_producer() -> Producer:
+    return Producer(
         {
             "bootstrap.servers": os.environ["KAFKA_BOOTSTRAP_SERVERS"],
             "client.id": "books-producer",
@@ -96,7 +96,13 @@ def produce_books(batch_id: str | None = None) -> Path:
         }
     )
 
-    batch = {
+def produce_books(batch_id: str | None = None) -> Path:
+    batch_id = batch_id or uuid4().hex
+
+    datasets = read_sources()
+    producer = create_producer()
+
+    batch: dict[str, Any] = {
         "batch_id": batch_id,
         "topics": {},
     }
@@ -105,19 +111,13 @@ def produce_books(batch_id: str | None = None) -> Path:
 
     for topic, (_, key_field) in SOURCES.items():
         result = publish_topic(
-            producer=producer,
-            topic=topic,
-            books=datasets[topic],
-            key_field=key_field,
-            batch_id=batch_id
+            producer, topic, datasets[topic], key_field, batch_id
         )
 
         batch["topics"][topic] = result
+        logger.info(f"Published {result['count']} messages to {topic}.")
 
-        logger.info(f"Published: {result['count']} messages to {topic}")
-
-    write_json(BATCH_PATH, BATCH_PATH)
-    
+    write_json(BATCH_PATH, batch)
     logger.info(f"Batch metadata saved to {BATCH_PATH}")
 
     return BATCH_PATH

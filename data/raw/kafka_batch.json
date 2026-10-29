@@ -4,14 +4,14 @@
     "books_api": {
       "partition": 0,
       "count": 1000,
-      "start_offset": 0,
-      "end_offset": 1000
+      "start_offset": 1000,
+      "end_offset": 2000
     },
     "books_scraping": {
       "partition": 0,
       "count": 1000,
-      "start_offset": 0,
-      "end_offset": 1000
+      "start_offset": 1000,
+      "end_offset": 2000
     }
   }
 }

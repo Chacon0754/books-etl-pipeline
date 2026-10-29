@@ -144,9 +144,6 @@ Las variables de configuración se definen en un archivo `.env` ubicado en la ra
 - `MONGO_ROOT_PASSWORD`
 - `MONGO_DATABASE`
 
-El archivo `.env` está excluido de Git.
-
-
 ## Validación realizada
 
 Se comprobó una ejecución completa con las nueve tareas en estado `success`.
